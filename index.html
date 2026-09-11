@@ -1,0 +1,50 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Under Construction</title>
+<style>
+  :root{
+    --bg:#F7F7F5; --fg:#1B1D20; --muted:#71767E; --rule:#E2E1DB; --accent:#3E6B66;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#141619; --fg:#E8E9EB; --muted:#8D939B; --rule:#2A2E34; --accent:#79B4AC;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#141619; --fg:#E8E9EB; --muted:#8D939B; --rule:#2A2E34; --accent:#79B4AC;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.6 "Segoe UI",system-ui,-apple-system,sans-serif;
+    display:grid; place-items:center; padding:32px;
+    -webkit-font-smoothing:antialiased;
+  }
+  main{max-width:34rem; text-align:center}
+  .mark{
+    width:40px; height:40px; margin:0 auto 26px; border-radius:50%;
+    border:2px solid var(--accent); position:relative;
+  }
+  .mark::after{
+    content:""; position:absolute; inset:-2px;
+    border:2px solid transparent; border-top-color:var(--accent);
+    border-radius:50%; animation:spin 2.4s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion:reduce){.mark::after{animation:none}}
+  h1{
+    font-size:clamp(22px,4vw,29px); font-weight:600; letter-spacing:-.02em;
+    margin:0 0 12px; text-wrap:balance;
+  }
+  p{color:var(--muted); margin:0 auto; max-width:30rem}
+  .rule{width:44px; height:1px; background:var(--rule); margin:28px auto 0}
+</style>
+
+<main>
+  <div class="mark" aria-hidden="true"></div>
+  <h1>Under construction</h1>
+  <p>Nothing to see here yet. This page is a placeholder.</p>
+  <div class="rule"></div>
+</main>
