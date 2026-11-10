@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Vector sources</title>
+<meta name="description" content="SVG source code for three traced illustrations, shown as text with a one-click copy of all three.">
+<style>
+  :root{
+    --bg:#F7F7F5; --panel:#FFFFFF; --fg:#1B1D20; --muted:#71767E;
+    --rule:#E2E1DB; --accent:#3E6B66; --accent-soft:#3E6B6614;
+    --chip:#EFEFEA; --on-accent:#FFFFFF; --code-bg:#F1F1EE;
+    --shadow:0 1px 2px #1B1D200A, 0 4px 14px #1B1D2008;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#141619; --panel:#1B1E22; --fg:#E8E9EB; --muted:#8D939B;
+      --rule:#2A2E34; --accent:#79B4AC; --accent-soft:#79B4AC1A;
+      --chip:#23272D; --on-accent:#141619; --code-bg:#101214;
+      --shadow:0 1px 2px #0006, 0 4px 14px #0004;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 "Segoe UI",system-ui,-apple-system,sans-serif; -webkit-font-smoothing:antialiased}
+  .wrap{max-width:72rem; margin:0 auto; padding:0 16px 96px}
+  header{padding:44px 0 22px; border-bottom:1px solid var(--rule)}
+  .kicker{font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); font-weight:640; margin:0 0 10px}
+  h1{font-size:clamp(23px,4.4vw,32px); font-weight:640; letter-spacing:-.022em; margin:0 0 10px}
+  .lede{color:var(--muted); margin:0; max-width:46rem}
+  a{color:var(--accent)}
+  .stats{display:flex; flex-wrap:wrap; gap:8px 26px; margin-top:22px; font-size:13.5px; color:var(--muted)}
+  .stats b{color:var(--fg); font-weight:620; font-variant-numeric:tabular-nums}
+
+  .bar{position:sticky; top:0; z-index:5; display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; padding:12px 0; margin-top:4px; background:var(--bg); border-bottom:1px solid var(--rule)}
+  button{font:inherit; font-size:14px; font-weight:600; padding:9px 16px; border-radius:7px; border:1px solid var(--accent); background:var(--accent); color:var(--on-accent); cursor:pointer}
+  button.secondary{background:transparent; color:var(--accent)}
+  button:disabled{opacity:.5; cursor:default}
+  .status{font-size:13.5px; color:var(--muted)}
+  .status.ok{color:var(--accent); font-weight:600}
+
+  section.file{margin-top:34px}
+  .filehead{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px 16px; margin-bottom:8px}
+  .filehead h2{font-size:18px; font-weight:640; margin:0; font-family:ui-monospace,Consolas,"SF Mono",Menlo,monospace}
+  .filehead .meta{font-size:13px; color:var(--muted)}
+  .filehead .meta b{color:var(--fg); font-weight:600; font-variant-numeric:tabular-nums}
+  pre{
+    margin:0; padding:14px 16px; max-height:420px; overflow:auto;
+    background:var(--code-bg); border:1px solid var(--rule); border-radius:8px;
+    font:12.5px/1.5 ui-monospace,Consolas,"SF Mono",Menlo,monospace; color:var(--fg);
+    white-space:pre; tab-size:2;
+  }
+  pre.loading{color:var(--muted)}
+  footer{margin-top:56px; padding-top:18px; border-top:1px solid var(--rule); font-size:13px; color:var(--muted)}
+  textarea.sink{position:fixed; left:-9999px; top:0; width:1px; height:1px; opacity:0}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="kicker">Vector sources · SVG as text</p>
+  <h1>Three traced illustrations, as code</h1>
+  <p class="lede">The SVG markup for each file is shown below as plain text rather than rendered. Use the button to copy all three at once, or copy one file at a time.</p>
+  <div class="stats">
+    <span><b>3</b> files</span>
+    <span><b id="totalChars">…</b> characters in all</span>
+    <span>Tracer <b>VTracer 0.6.12</b></span>
+  </div>
+</header>
+
+<div class="bar">
+  <button id="copyAll" disabled>Copy all three</button>
+  <button id="selectAll" class="secondary" disabled>Select all three</button>
+  <span class="status" id="status">Loading SVG sources…</span>
+</div>
+
+<section class="file" data-file="movie-night-friends.svg">
+  <div class="filehead">
+    <h2>movie-night-friends.svg</h2>
+    <span class="meta"><b class="chars">…</b> chars · <b class="lines">…</b> lines · <a href="movie-night-friends.svg" download>download</a> · <button class="secondary copyOne">Copy this file</button></span>
+  </div>
+  <pre class="loading">Loading…</pre>
+</section>
+
+<section class="file" data-file="pickleball-player.svg">
+  <div class="filehead">
+    <h2>pickleball-player.svg</h2>
+    <span class="meta"><b class="chars">…</b> chars · <b class="lines">…</b> lines · <a href="pickleball-player.svg" download>download</a> · <button class="secondary copyOne">Copy this file</button></span>
+  </div>
+  <pre class="loading">Loading…</pre>
+</section>
+
+<section class="file" data-file="maria-retail-team_v2.svg">
+  <div class="filehead">
+    <h2>maria-retail-team_v2.svg</h2>
+    <span class="meta"><b class="chars">…</b> chars · <b class="lines">…</b> lines · <a href="maria-retail-team_v2.svg" download>download</a> · <button class="secondary copyOne">Copy this file</button></span>
+  </div>
+  <pre class="loading">Loading…</pre>
+</section>
+
+<footer>Part of the <a href="../">corpus site</a>. Files are served alongside this page; the code shown is the file content byte for byte.</footer>
+</div>
+
+<textarea class="sink" id="sink" aria-hidden="true" tabindex="-1"></textarea>
+
+<script>
+(async function(){
+  const sections = [...document.querySelectorAll('section.file')];
+  const status = document.getElementById('status');
+  const copyAll = document.getElementById('copyAll');
+  const selectAll = document.getElementById('selectAll');
+  const sink = document.getElementById('sink');
+  const sources = {};
+
+  function setStatus(msg, ok){ status.textContent = msg; status.className = 'status' + (ok ? ' ok' : ''); }
+
+  async function copyText(text){
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch (e) {
+      sink.value = text; sink.focus(); sink.select();
+      try { return document.execCommand('copy'); } catch (e2) { return false; }
+    }
+  }
+
+  function fmt(n){ return n.toLocaleString(); }
+
+  await Promise.all(sections.map(async sec => {
+    const name = sec.dataset.file;
+    const pre = sec.querySelector('pre');
+    try {
+      const res = await fetch(name, {cache:'no-cache'});
+      if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+      const text = await res.text();
+      sources[name] = text;
+      pre.textContent = text;
+      pre.classList.remove('loading');
+      sec.querySelector('.chars').textContent = fmt(text.length);
+      sec.querySelector('.lines').textContent = fmt(text.split('\n').length);
+    } catch (err) {
+      pre.textContent = 'Could not load ' + name + ': ' + err.message;
+    }
+    sec.querySelector('.copyOne').addEventListener('click', async () => {
+      const ok = await copyText(sources[name] || '');
+      setStatus(ok ? 'Copied ' + name : 'Copy failed for ' + name, ok);
+    });
+  }));
+
+  const all = sections.map(s => sources[s.dataset.file]).filter(Boolean).join('\n\n');
+  document.getElementById('totalChars').textContent = fmt(all.length);
+  const loaded = Object.keys(sources).length;
+  setStatus(loaded === sections.length ? 'Ready. Copy all three places every file on the clipboard in order, separated by a blank line.' : 'Loaded ' + loaded + ' of ' + sections.length + ' files.');
+  copyAll.disabled = selectAll.disabled = loaded === 0;
+
+  copyAll.addEventListener('click', async () => {
+    const ok = await copyText(all);
+    setStatus(ok ? 'Copied all three files (' + fmt(all.length) + ' characters).' : 'Copy failed. Use Select all three, then Ctrl+C.', ok);
+  });
+
+  selectAll.addEventListener('click', () => {
+    const range = document.createRange();
+    const first = sections[0].querySelector('pre');
+    const last = sections[sections.length - 1].querySelector('pre');
+    range.setStartBefore(first); range.setEndAfter(last);
+    const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+    setStatus('Selected. Press Ctrl+C (Cmd+C on Mac) to copy.', true);
+  });
+})();
+</script>
+</html>
