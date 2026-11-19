@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Trend Radar, Q2 to Q4 2026</title>
+<meta name="description" content="Source-verified market signals for eight strategic banking pillars, April to November 2026, each classified as Validation or Nuance.">
+<style>
+  :root{
+    --bg:#F7F7F5; --panel:#FFFFFF; --fg:#1B1D20; --muted:#71767E;
+    --rule:#E2E1DB; --accent:#3E6B66; --accent-soft:#3E6B6614;
+    --chip:#EFEFEA; --on-accent:#FFFFFF; --a:#3E6B66; --b:#8A6D3B; --c:#9B4B4B;
+    --shadow:0 1px 2px #1B1D200A, 0 4px 14px #1B1D2008;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#141619; --panel:#1B1E22; --fg:#E8E9EB; --muted:#8D939B;
+      --rule:#2A2E34; --accent:#79B4AC; --accent-soft:#79B4AC1A;
+      --chip:#23272D; --on-accent:#141619; --a:#79B4AC; --b:#C8A468; --c:#D98C8C;
+      --shadow:0 1px 2px #0006, 0 4px 14px #0004;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#141619; --panel:#1B1E22; --fg:#E8E9EB; --muted:#8D939B;
+    --rule:#2A2E34; --accent:#79B4AC; --accent-soft:#79B4AC1A;
+    --chip:#23272D; --on-accent:#141619; --a:#79B4AC; --b:#C8A468; --c:#D98C8C;
+    --shadow:0 1px 2px #0006, 0 4px 14px #0004;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.6 "Segoe UI",system-ui,-apple-system,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:60rem; margin:0 auto; padding:0 16px 96px}
+  header{padding:44px 0 22px; border-bottom:1px solid var(--rule)}
+  .kicker{font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); font-weight:640; margin:0 0 10px}
+  h1{font-size:clamp(23px,4.4vw,32px); font-weight:640; letter-spacing:-.022em; margin:0 0 10px; text-wrap:balance}
+  .lede{color:var(--muted); margin:0; max-width:46rem}
+  .stats{display:flex; flex-wrap:wrap; gap:8px 26px; margin-top:22px; font-size:13.5px; color:var(--muted)}
+  .stats b{color:var(--fg); font-weight:620; font-variant-numeric:tabular-nums}
+  .note{
+    margin-top:22px; padding:13px 15px; border-left:2px solid var(--accent);
+    background:var(--accent-soft); border-radius:0 7px 7px 0;
+    font-size:14px; color:var(--fg);
+  }
+  .note b{font-weight:620}
+  a{color:var(--accent); overflow-wrap:anywhere}
+
+  nav.toc{display:flex; flex-wrap:wrap; gap:6px 14px; padding:14px 0; border-bottom:1px solid var(--rule); font-size:13.5px}
+  nav.toc a{text-decoration:none; color:var(--muted)}
+  nav.toc a:hover{color:var(--accent)}
+  nav.toc a.findings{color:var(--accent); font-weight:600}
+
+  .brief{margin-top:40px}
+  .brief h2{font-size:clamp(19px,3vw,23px); font-weight:640; letter-spacing:-.015em; margin:0 0 10px}
+  .brief p{margin:0 0 14px}
+  .brief p.lead{font-size:16.5px; color:var(--fg)}
+  .brief ol, .brief ul{padding-left:22px; margin:0 0 14px}
+  .brief li{margin:0 0 9px}
+  .brief ol.five > li, .brief ol.principles > li{margin-bottom:12px}
+  .brief table{width:100%; border-collapse:collapse; font-size:14px; margin:6px 0 18px; background:var(--panel); border:1px solid var(--rule); border-radius:9px; overflow:hidden}
+  .brief th, .brief td{text-align:left; vertical-align:top; padding:9px 11px; border-bottom:1px solid var(--rule)}
+  .brief th{font-size:11.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); font-weight:640; background:var(--chip)}
+  .brief tr:last-child td{border-bottom:none}
+  .tablewrap{overflow-x:auto; margin:0 -16px; padding:0 16px}
+  .brief table.wide{min-width:52rem}
+
+  .findings-head{margin-top:56px; padding-top:28px; border-top:1px solid var(--rule)}
+  .findings-head h2{font-size:clamp(19px,3vw,23px); font-weight:640; letter-spacing:-.015em; margin:0 0 6px}
+  .findings-head p{margin:0; color:var(--muted); font-size:14.5px}
+
+  .controls{position:sticky; top:0; z-index:10; background:var(--bg); padding:16px 0 12px; border-bottom:1px solid var(--rule)}
+  .search{
+    width:100%; padding:10px 13px; font:inherit; font-size:15px; color:var(--fg);
+    background:var(--panel); border:1px solid var(--rule); border-radius:9px;
+  }
+  .search:focus{outline:2px solid var(--accent); outline-offset:-1px; border-color:transparent}
+  .chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:11px}
+  .chips .lbl{font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); align-self:center; margin-right:4px; font-weight:640}
+  .chip{
+    font:inherit; font-size:12.5px; line-height:1; padding:7px 11px; cursor:pointer;
+    background:var(--chip); color:var(--muted); border:1px solid transparent;
+    border-radius:999px; white-space:nowrap;
+  }
+  .chip:hover{color:var(--fg)}
+  .chip[aria-pressed="true"]{background:var(--accent); color:var(--on-accent); border-color:var(--accent)}
+  .chip .n{opacity:.7; margin-left:5px; font-variant-numeric:tabular-nums}
+  .count{margin-top:11px; font-size:13px; color:var(--muted); font-variant-numeric:tabular-nums}
+
+  .group{margin-top:34px}
+  .group h2{font-size:13px; letter-spacing:.09em; text-transform:uppercase; color:var(--accent); margin:0 0 3px; font-weight:640}
+  .group p.gb{margin:0 0 14px; font-size:13.5px; color:var(--muted)}
+
+  .card{
+    background:var(--panel); border:1px solid var(--rule); border-radius:11px;
+    padding:17px 18px; margin-bottom:11px; box-shadow:var(--shadow);
+  }
+  .cardtop{display:flex; gap:9px; align-items:baseline; flex-wrap:wrap; margin-bottom:9px}
+  .fid{font:600 11.5px/1 ui-monospace,SFMono-Regular,Consolas,monospace; color:var(--muted); letter-spacing:.03em}
+  .tag{font-size:11px; line-height:1; padding:4px 8px; border-radius:5px; background:var(--chip); color:var(--muted); white-space:nowrap}
+  .tag.c-High{color:var(--a); font-weight:620} .tag.c-Medium{color:var(--b); font-weight:620} .tag.c-Low{color:var(--c); font-weight:620}
+  .claim{margin:0; font-size:15.5px; line-height:1.55}
+  .sowhat{
+    margin:13px 0 0; padding:12px 14px; background:var(--accent-soft);
+    border-radius:8px; font-size:14.5px; line-height:1.6;
+  }
+  .sowhat span{display:block; font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--accent); font-weight:640; margin-bottom:5px}
+  details{margin-top:12px}
+  summary{cursor:pointer; font-size:13px; color:var(--accent); font-weight:600; list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"+ "; font-weight:700}
+  details[open] summary::before{content:"− "}
+  .detail{margin-top:13px; padding-top:13px; border-top:1px solid var(--rule); font-size:14px}
+  .detail h3{font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); margin:15px 0 5px; font-weight:640}
+  .detail h3:first-child{margin-top:0}
+  .detail ul{margin:0; padding-left:18px}
+  .detail li{margin:0 0 5px}
+  .detail p{margin:0}
+  .meta{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:12.5px; color:var(--muted); margin-top:12px}
+  .meta b{color:var(--fg); font-weight:600}
+  .empty{padding:40px 0; color:var(--muted); text-align:center}
+  footer{margin-top:56px; padding-top:18px; border-top:1px solid var(--rule); font-size:13px; color:var(--muted)}
+  @media (max-width:640px){ .brief table{font-size:13px} .brief th,.brief td{padding:7px 8px} }
+</style>
+
+<style>
+  .tag.d-a{color:var(--a); font-weight:620} .tag.d-b{color:var(--b); font-weight:620}
+  .card p{margin:8px 0 0} .card p.src{font-size:13px; color:var(--muted)}
+  .brief table{border-collapse:collapse; width:100%; margin:14px 0; font-size:14.5px}
+  .brief th,.brief td{text-align:left; padding:7px 10px; border-bottom:1px solid var(--rule); vertical-align:top}
+  .brief td.num{text-align:right; white-space:nowrap}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="kicker">External evidence · Q2 to Q4 2026</p>
+  <h1>Trend Radar: what the market said about eight strategic pillars</h1>
+  <p class="lede">Real, sourced market signals from April 1 to November 19, 2026 for each of the eight high-conviction pillars. Each signal either supports the pillar's thesis (Validation) or complicates it (Nuance). Every pillar was treated as a claim to test, so Nuance was looked for as hard as Validation.</p>
+  <div class="stats">
+    <span><b>39</b> signals</span>
+    <span><b>8</b> pillars</span>
+    <span><b>17</b> Validation · <b>22</b> Nuance</span>
+  </div>
+  <div class="note"><b>How to read this.</b> The pillar-by-pillar read comes first; all signals follow, filterable by pillar, classification and quarter. Each signal has one source, and every number, date and name was checked against that page. Surveys name their sponsor. Proposed rules and bills are described as proposed, and their status can change. <a href="TREND_RADAR.csv" download>Download TREND_RADAR.csv</a> — 6 columns, one row per signal.</div>
+</header>
+
+<section id="summary" class="brief">
+<h2>Pillar by pillar</h2>
+<p class="lead">The evidence is strongest where money already moves (pay-later at checkout, instant payments, fraud losses) and weakest where the pillar depends on customers handing control to AI. Three surveys agree that most Americans will not yet let AI move their money, and the servicing pillar found no supporting signal that cleared the evidence bar.</p>
+<table>
+<tr><th>Pillar</th><th>Validation</th><th>Nuance</th><th>What the signals say</th></tr>
+<tr><td><a href="#pillar-1">1. Offer Personalized Financial Products</a></td><td class="num">3</td><td class="num">2</td><td>The plumbing for pricing on real cash flow arrived this year (Experian's cash-flow bureau, Plaid's new scores). Regulators accept that credit is priced to the individual, but are moving to make personalized pricing disclosed.</td></tr>
+<tr><td><a href="#pillar-2">2. Actively Manage Customers' Finances</a></td><td class="num">2</td><td class="num">3</td><td>Consumers will let AI protect their money or carry out a task they already approved. Most are not ready to let it move money on its own, and interest in handing over control fell over the past year.</td></tr>
+<tr><td><a href="#pillar-3">3. Orchestrate Across Full Financial Life</a></td><td class="num">2</td><td class="num">3</td><td>The supporting evidence is British: about 17 million UK open banking users and record monthly traffic. In the US the data-sharing rule is being rewritten, the EU plans to withdraw its open-finance proposal, and most Americans say they already keep most of their finances at one institution.</td></tr>
+<tr><td><a href="#pillar-4">4. Meet Consumers Where They Are</a></td><td class="num">3</td><td class="num">2</td><td>Pay-later at checkout is a $156.7 billion US market and still growing by a third a year at Affirm. It also pushes some users into overdraft fees. Checkout inside AI assistants has been announced, but only 23% of Americans trust AI to pay for them and no volume data exists yet.</td></tr>
+<tr><td><a href="#pillar-5">5. Engage One-to-One</a></td><td class="num">2</td><td class="num">2</td><td>Customers reward personalization and say they rarely get it: one in five say their bank always personalizes. They draw a line when AI decides without a human check, and regional institutions trail national and online-only banks.</td></tr>
+<tr><td><a href="#pillar-6">6. Deliver Seamless &amp; Proactive Servicing</a></td><td class="num">0</td><td class="num">5</td><td>No in-window evidence cleared the bar in support of this pillar. What did: fewer than three in ten app customers use the virtual assistant, 87% call a human option essential, California has legislated a route to a human, and few companies have cut service staff because of AI.</td></tr>
+<tr><td><a href="#pillar-7">7. Proactively Protect Customers Against Emerging Threats</a></td><td class="num">3</td><td class="num">2</td><td>Reported fraud losses hit a record of about $16 billion for 2025, and recovery after the fact stops only a little over half of the money. Tools to stop payments first are uneven: no general federal rule lets banks hold a suspect electronic payment, and standards for controlling AI agents are still being written.</td></tr>
+<tr><td><a href="#pillar-8">8. Move Money Instantly, Anywhere</a></td><td class="num">2</td><td class="num">3</td><td>US instant volumes are growing fast (FedNow up 27.6% in a quarter, Same Day ACH up 36.7% in a year) from a small base: about one in five institutions has joined FedNow. Cross-border retail payments have become slower since 2023.</td></tr>
+</table>
+<h2>Limits</h2>
+<ul>
+<li>Seven signals cite a syndicated copy, mirror or secondhand report because the original publisher blocked automated reading: both J.D. Power rows, both Gartner rows, the Congressional Research Service note, the FIS survey, and the report on banks blocking AI agents.</li>
+<li>Several signals are pending items: the New York pricing bill, the House earned wage access bill, the FTC pricing statement, the CFPB data-rights rewrite and the New York City service rule.</li>
+<li>Not found in the window: transaction data for checkout inside AI assistants, disclosed resolution rates for bank AI servicing, a US launch of a cross-bank financial hub, and any US large-bank agent that acts on a customer's money.</li>
+<li>The four emerging pillars were out of scope for this pass.</li>
+</ul>
+<h2>Method</h2>
+<p>One researcher per pillar gathered 90 candidate signals. A separate verifier per pillar re-opened every source, checked each figure and date against the page, replaced secondary sources with primary ones where possible, and cut to the strongest three to five. About 38 claims or dates were corrected or removed in that pass.</p>
+</section>
+
+<div class="findings-head" id="findings">
+  <h2>All signals</h2>
+  <p>39 rows. Filters combine; search matches headline, context and source.</p>
+</div>
+<div class="controls">
+  <input class="search" id="q" type="search" placeholder="Search signals…" aria-label="Search signals">
+  <div class="chips" id="pillarChips"><span class="lbl">Pillar</span></div>
+  <div class="chips" id="clsChips"><span class="lbl">Classification</span></div>
+  <div class="chips" id="qtrChips"><span class="lbl">Quarter</span></div>
+  <div class="count" id="count"></div>
+</div>
+<div id="out"></div>
+<footer>Compiled 2026-11-19 with a parallel research sweep and a per-pillar verification pass. Not indexed. Signals are external evidence, not internal data. <a href="../">Back to corpus</a>.</footer>
+</div>
+<script id="data" type="application/json">[{"Quarter": "Q4 2026", "Pillar": "Offer Personalized Financial Products", "Headline": "Experian now runs a separate credit bureau built on bank-account cash flow.", "Context": "On October 6, 2026 Experian announced Experian Cashflow Data Bureau, Inc., a US consumer reporting agency that turns bank-account transaction and balance data shared by consumers into a report for lenders, though the release names no lender customers.", "Classification": "Validation", "Source": "https://www.experianplc.com/newsroom/press-releases/2026/experian-unveils-cashflow-data-bureau-to-power-the-next-generati"}, {"Quarter": "Q4 2026", "Pillar": "Offer Personalized Financial Products", "Headline": "Plaid's new cash-flow credit scores let borrowers share bank data once and reuse it on later applications.", "Context": "In its own launch announcement on October 6, 2026, Plaid (US) introduced LendScore 2, a family of cash-flow risk scores with versions for auto, home and short-term lending, and Instant Link, which spares borrowers from reconnecting a bank account on later credit applications.", "Classification": "Validation", "Source": "https://plaid.com/blog/instant-link-next-generation-lendscore/"}, {"Quarter": "Q3 2026", "Pillar": "Offer Personalized Financial Products", "Headline": "A federal rulebook for getting paid before payday cleared a House committee on a split vote.", "Context": "The US House Financial Services Committee said on July 1, 2026 that it passed H.R. 9330, the Earned Wage Access Consumer Protection Act, by 29 to 22, a bill that would set a federal regulatory framework for earned wage access services.", "Classification": "Validation", "Source": "https://financialservices.house.gov/news/documentsingle.aspx?DocumentID=411188"}, {"Quarter": "Q3 2026", "Pillar": "Offer Personalized Financial Products", "Headline": "The FTC accepts that credit is priced to the individual but wants personalized prices elsewhere disclosed.", "Context": "In a proposed enforcement policy statement dated August 19, 2026, the US Federal Trade Commission said credit and insurance prices necessarily turn on individual characteristics, while firms that personalize prices where consumers do not expect it should clearly disclose the basis and the types of data used.", "Classification": "Nuance", "Source": "https://www.ftc.gov/system/files/ftc_gov/pdf/p034101-ftc-enforcement-policy-statement-re-personalized-pricing-proposed-for-public-comment.pdf"}, {"Quarter": "Q2 2026", "Pillar": "Offer Personalized Financial Products", "Headline": "New York lawmakers voted to ban pricing based on personal data but exempted credit priced on creditworthiness.", "Context": "New York's Assembly and Senate passed bill A9349-B on June 4, 2026, barring surveillance pricing while exempting insurers and prices or terms based on an evaluation of creditworthiness, and the legislature's bill page showed no action by the governor when checked on November 19, 2026.", "Classification": "Nuance", "Source": "https://www.nysenate.gov/legislation/bills/2025/A9349/amendment/B"}, {"Quarter": "Q4 2026", "Pillar": "Actively Manage Customers' Finances", "Headline": "Most Americans are uneasy about letting an AI agent move their money.", "Context": "A Morning Consult poll of 4,402 US adults for the American Bankers Association, fielded October 9-12, 2026, found 77% are concerned about giving an AI tool or agent permission to move money or make payments, and only 27% say they are likely to let an AI agent manage their bank cash balances on its own in the next 12 months.", "Classification": "Nuance", "Source": "https://www.aba.com/about-us/press-room/press-releases/oct-2026-morning-consult-survey-us-consumers-are-wary-of-ai-agents--handling-their-money"}, {"Quarter": "Q4 2026", "Pillar": "Actively Manage Customers' Finances", "Headline": "Interest in letting AI directly manage money is low and has fallen over the past year.", "Context": "PYMNTS Intelligence's US consumer surveys found 16% of respondents in July-September 2026 were interested in giving AI authority to manage their money directly, down from 20% in September-November 2025.", "Classification": "Nuance", "Source": "https://www.pymnts.com/report/study/the-money-prompt-consumers-want-advice-without-giving-up-control/"}, {"Quarter": "Q4 2026", "Pillar": "Actively Manage Customers' Finances", "Headline": "People will let AI protect their money or pay a bill they already approved, but most are not ready to hand over day-to-day money management.", "Context": "An FIS-sponsored online survey of 2,000 US adults, fielded September 16-30, 2026 with a Kantar sample, found 57% comfortable with AI freezing a suspicious charge without asking and 55% with it paying a previously approved recurring bill, while 37% said they were ready to hand day-to-day money management to an AI assistant and 49% said they were not.", "Classification": "Nuance", "Source": "https://finviz.com/news/416951/us-adults-would-let-ai-protect-their-money-before-letting-ai-spend-it-fis-research-finds"}, {"Quarter": "Q4 2026", "Pillar": "Actively Manage Customers' Finances", "Headline": "Most Americans would let their bank's AI assistant handle at least one financial task for them.", "Context": "A TD Bank survey of 1,008 US respondents, run by Big Village on September 18-20, 2026, found 69% would allow a bank-provided AI assistant to complete at least one financial task on their behalf, though 36% named human review of important decisions as a key safeguard.", "Classification": "Validation", "Source": "https://stories.td.com/us/en/article/nearly-7-in-10-americans-would-let-ai-complete-certain-financial-tasks-td-survey-finds"}, {"Quarter": "Q2 2026", "Pillar": "Actively Manage Customers' Finances", "Headline": "Robinhood now lets customers' AI agents place stock trades, but only from a separate account with its own balance.", "Context": "As reported on May 27, 2026, Robinhood's agentic trading launched in beta and is limited to stocks: users load a dedicated account for the agent, the agent cannot reach their full brokerage balance, and users are notified of every trade.", "Classification": "Validation", "Source": "https://thenextweb.com/news/robinhood-is-letting-ai-agents-trade-stocks-and-spend-money-on-your-credit-card"}, {"Quarter": "Q3 2026", "Pillar": "Orchestrate Across Full Financial Life", "Headline": "The US rule giving consumers a right to share their bank data is being rewritten and has been waiting on White House review since August.", "Context": "US: the CFPB's proposed rule, titled Personal Financial Data Rights Reconsideration, was received for regulatory review on 4 August 2026 and is still listed as pending on the federal review tracker, flagged as economically significant.", "Classification": "Nuance", "Source": "https://www.reginfo.gov/public/do/eoDetails?rrid=1495765"}, {"Quarter": "Q4 2026", "Pillar": "Orchestrate Across Full Financial Life", "Headline": "The EU plans to scrap its proposed law that would have extended data sharing from bank accounts to the rest of a customer's finances.", "Context": "EU: the European Commission's 2027 work programme, dated 4 November 2026, lists the 2023 Financial Data Access proposal among files it intends to withdraw within six months, saying there have been no negotiations since June 2025 and it is unlikely to win Council support.", "Classification": "Nuance", "Source": "https://commission.europa.eu/document/download/9ad0afe2-f9a8-46e9-bd3b-74c2de496c48_en?filename=COM_2026_710_1_annexe_EN.pdf"}, {"Quarter": "Q2 2026", "Pillar": "Orchestrate Across Full Financial Life", "Headline": "Nearly one in three UK adults now uses open banking, and the regulator is moving to extend it to the rest of people's finances.", "Context": "UK: the Financial Conduct Authority said on 14 April 2026 that open banking has approximately 17 million users and that it will work with HM Treasury on options for an open finance regulatory framework by the end of 2027.", "Classification": "Validation", "Source": "https://www.fca.org.uk/news/press-releases/fca-sets-out-vision-open-finance"}, {"Quarter": "Q3 2026", "Pillar": "Orchestrate Across Full Financial Life", "Headline": "UK open banking has passed one billion payments and 100 billion data requests, and monthly traffic is still setting records.", "Context": "UK: Open Banking Limited, the body that runs the system, reported on 30 July 2026 that the nine largest banks had passed both milestones since launch and that June 2026 set a monthly record of 2.81 billion API calls alongside 40.16 million payments.", "Classification": "Validation", "Source": "https://www.openbanking.org.uk/news/open-banking-surpasses-one-billion-payments-and-100-billion-api-calls/"}, {"Quarter": "Q3 2026", "Pillar": "Orchestrate Across Full Financial Life", "Headline": "Most Americans say they already keep most or all of their finances at one institution, which narrows the audience for a cross-bank view.", "Context": "US: in a survey of 1,000 consumers fielded via Dynata in Q2 2026 and published by SavvyMoney, a vendor to financial institutions, 42% said they use the same institution for everything and 41% use one for most needs, while 17% spread their finances across several.", "Classification": "Nuance", "Source": "https://www.savvymoney.com/2026-consumer-banking-survey/"}, {"Quarter": "Q2 2026", "Pillar": "Meet Consumers Where They Are", "Headline": "Pay-later credit at checkout has become a market of more than $150 billion a year in the US.", "Context": "Federal Reserve Board staff estimated in a June 5, 2026 note that six large providers (Affirm, Afterpay, Klarna, PayPal, Sezzle and Zip) issued $156.7 billion of buy now, pay later credit in 2025, with pay-in-4 plans making up 50 percent and about 63 percent carrying 0 percent APR.", "Classification": "Validation", "Source": "https://www.federalreserve.gov/econres/notes/feds-notes/buy-now-pay-later-beyond-pay-in-4-a-comprehensive-product-overview-20260605.html"}, {"Quarter": "Q4 2026", "Pillar": "Meet Consumers Where They Are", "Headline": "Affirm's pay-over-time volume keeps growing by a third a year, and its card is the fastest-growing part.", "Context": "Affirm reported in its November 5, 2026 shareholder letter that volume rose 34 percent to $14.4 billion in the quarter ended September 30, 2026, its twelfth straight quarter above 30 percent growth, with Affirm Card volume up 117 percent to $3.3 billion (company-reported figures).", "Classification": "Validation", "Source": "https://www.sec.gov/Archives/edgar/data/1820953/000162828026071005/affirmfq127shareholderle.htm"}, {"Quarter": "Q3 2026", "Pillar": "Meet Consumers Where They Are", "Headline": "Pay-later growth is concentrated among cash-strapped shoppers, and it is costing some of them bank fees.", "Context": "A Federal Reserve publication from August 2026, based on its nationally representative 2025 US household survey of nearly 13,000 respondents, found 16 percent of adults used buy now, pay later in 2025 and 11 percent of users had a payment trigger an overdraft or insufficient-funds fee in the prior year.", "Classification": "Nuance", "Source": "https://www.federalreserve.gov/publications/files/consumer-community-context-20260819.pdf"}, {"Quarter": "Q3 2026", "Pillar": "Meet Consumers Where They Are", "Headline": "Most Americans are not yet willing to let an AI assistant pay for them.", "Context": "A Harris Poll survey of 2,065 US consumers sponsored by Visa, fielded May 26-28, 2026 and released September 9, 2026, found only 23 percent trust generative AI to handle payment transactions on their behalf, even though 72 percent have used an AI assistant.", "Classification": "Nuance", "Source": "https://investor.visa.com/news/news-details/2026/New-Visa-Research-Finds-Consumer-Trust-is-Accelerating-the-Path-to-Agentic-Commerce/default.aspx"}, {"Quarter": "Q2 2026", "Pillar": "Meet Consumers Where They Are", "Headline": "Google is building checkout directly into Search and its Gemini assistant.", "Context": "Google announced on May 19, 2026 that a shared shopping cart would roll out across Search and the Gemini app in the US that summer with Google Pay checkout, naming Nike, Sephora, Target, Ulta Beauty, Walmart and Wayfair among merchants due to get checkout features, which shows the launch but not customer uptake.", "Classification": "Validation", "Source": "https://blog.google/products-and-platforms/products/shopping/google-shopping-cart/"}, {"Quarter": "Q2 2026", "Pillar": "Engage One-to-One", "Headline": "Personalization lifts bank customer satisfaction sharply, but few customers say they always get it.", "Context": "J.D. Power's 2026 U.S. Financial Health Support and Advice Study, released May 27, 2026, found just 20% of US bank customers say their bank always personalizes the information they receive, and satisfaction scores rise 238 points among bank customers when providers get personalization right.", "Classification": "Validation", "Source": "https://finance.yahoo.com/economy/policy/articles/retail-banks-expand-financial-advice-110000343.html"}, {"Quarter": "Q3 2026", "Pillar": "Engage One-to-One", "Headline": "Most US bank customers feel their bank is not tailoring to them, yet few banks rank personalization as a top priority.", "Context": "A Celent report commissioned by Temenos and dated August 25, 2026, based on a survey of 2,500 US consumers, found more than half feel their bank is not tailoring products and services well enough, while fewer than 10% of US banks call personalization a top-three priority for 2026.", "Classification": "Validation", "Source": "https://www.temenos.com/wp-content/uploads/2026/08/Celent_The-Banking-Expectation-Gap-US-Consumer-Edition-2026.pdf"}, {"Quarter": "Q3 2026", "Pillar": "Engage One-to-One", "Headline": "Customers draw a line at personalization when AI makes the decision with no human check.", "Context": "Datos Insights reported on September 3, 2026 that nearly 45% of consumers in its 2026 study of 3,500 US consumers say personalized experiences become unacceptable when AI makes decisions without human review.", "Classification": "Nuance", "Source": "https://datos-insights.com/blog/engagement-not-acquisition-will-define-retail-bankings-next-era/"}, {"Quarter": "Q3 2026", "Pillar": "Engage One-to-One", "Headline": "Product recommendations are landing better at national and online-only banks than at regional and community institutions.", "Context": "A survey of 1,500 American digital banking users, fielded March 26 to April 22, 2026 by The Center for Generational Kinetics for sponsor Alkami, found only 38% of regional and community institution customers say product recommendations have become more relevant, versus 51% at online-only providers and 50% at major national institutions.", "Classification": "Nuance", "Source": "https://www.alkami.com/resources/research/2026-generational-trends-in-digital-banking-report/"}, {"Quarter": "Q2 2026", "Pillar": "Deliver Seamless & Proactive Servicing", "Headline": "Fewer than three in ten bank and card app customers use the built-in virtual assistant, and it falters on fraud and disputes.", "Context": "J.D. Power's 2026 U.S. banking and credit card app studies, released in late May 2026, found 28% of national bank and credit card app customers use virtual assistants, and that satisfaction with them drops sharply when customers try to resolve problems, dispute charges or identify fraud.", "Classification": "Nuance", "Source": "https://www.fintechnews.org/ai-powered-virtual-assistants-struggle-with-complex-tasks-in-bank-and-credit-card-apps-and-websites-jd-power-finds/"}, {"Quarter": "Q3 2026", "Pillar": "Deliver Seamless & Proactive Servicing", "Headline": "Nearly nine in ten customers say a route to a human agent is essential when a company uses AI for service.", "Context": "A Gartner survey of 3,566 business and consumer customers, fielded in February and March 2026 and published in August 2026, found 87% call a human option essential even though 50% say generative AI makes their interactions easier.", "Classification": "Nuance", "Source": "https://gcom.pdo.aws.gartner.com/en/newsroom/press-releases/2026-08-04-gartner-survey-finds-87-percent-of-customers-say-companies-using-genai-for-customer-service-must-provide-access-to-a-human-agent0"}, {"Quarter": "Q3 2026", "Pillar": "Deliver Seamless & Proactive Servicing", "Headline": "California has made reaching a human in customer service a legal duty for large businesses.", "Context": "The California Governor's office announced on September 28, 2026 that AB 1609 was signed, requiring large businesses to make a good-faith effort to connect a customer to a human within 15 minutes of a request or to schedule an appointment.", "Classification": "Nuance", "Source": "https://www.gov.ca.gov/2026/09/28/governor-newsom-signs-commonsense-legislation-to-make-your-life-easier/"}, {"Quarter": "Q4 2026", "Pillar": "Deliver Seamless & Proactive Servicing", "Headline": "New York City has proposed a rule that would require an easy route from an automated service system to a human.", "Context": "The city's Department of Consumer and Worker Protection published the proposed rule on October 20, 2026 with a 30-day comment period, and if adopted it would make businesses disclose automated customer service and offer an easy way to reach a human representative, with fines starting at $525.", "Classification": "Nuance", "Source": "https://www.nyc.gov/site/dca/news/072-26/mamdani-administration-proposes-ban-ai-customer-service-doom-loops"}, {"Quarter": "Q4 2026", "Pillar": "Deliver Seamless & Proactive Servicing", "Headline": "Few companies have actually cut service staff because of AI, and some are already hiring people back.", "Context": "In a Gartner survey of 275 service and support leaders fielded in July and August 2026, only 21% said they had reduced human agent headcount because of AI and 7% said they had rehired after earlier cuts, and Gartner predicts half of companies that cut will rehire by 2027.", "Classification": "Nuance", "Source": "https://gcom.pdo.aws.gartner.com/en/newsroom/press-releases/2026-11-05-gartner-survey-finds-21-percent-of-service-and-support-leaders-have-reduced-human-agent-headcount-because-of-ai"}, {"Quarter": "Q2 2026", "Pillar": "Proactively Protect Customers Against Emerging Threats", "Headline": "Americans reported a record amount lost to fraud in 2025, and the costliest scams often start with a fake bank security alert.", "Context": "The US Federal Trade Commission said on June 15, 2026 that about $16 billion was reported lost to fraud in 2025, roughly 25% more than in 2024, including $3.5 billion lost to imposter scams.", "Classification": "Validation", "Source": "https://www.ftc.gov/node/333221"}, {"Quarter": "Q2 2026", "Pillar": "Proactively Protect Customers Against Emerging Threats", "Headline": "Once scam money has left the account, even the FBI's rapid freeze process stops only a little over half of it.", "Context": "The FBI's Internet Crime Report covering 2025 shows its recovery team handled 3,900 incidents with about $1.16 billion in attempted theft and froze about $679 million, a 58% success rate.", "Classification": "Validation", "Source": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf"}, {"Quarter": "Q4 2026", "Pillar": "Proactively Protect Customers Against Emerging Threats", "Headline": "US banks have no general federal rule for pausing a suspicious electronic payment like the one that lets them hold a suspect check.", "Context": "A Congressional Research Service note dated November 2, 2026 says the federal fraud exception for holding checks generally has no equivalent for electronic transfers, and that roughly half of states have hold laws that apply to banks.", "Classification": "Nuance", "Source": "https://www.everycrsreport.com/reports/IN12752.html"}, {"Quarter": "Q4 2026", "Pillar": "Proactively Protect Customers Against Emerging Threats", "Headline": "Big US banks are blocking outside AI agents that customers have handed their banking passwords to.", "Context": "TechTarget reported on November 9, 2026, citing an October Axios report, that Morgan Stanley, JPMorgan Chase and other banks have moved to keep unvetted third-party agents off their platforms, and that banks have no reliable way to tell whether an agent is acting as the customer intended.", "Classification": "Validation", "Source": "https://www.techtarget.com/news/banks-are-catching-ai-agents-in-customer-accounts-security-isnt-ready/874065/"}, {"Quarter": "Q2 2026", "Pillar": "Proactively Protect Customers Against Emerging Threats", "Headline": "Shared standards for how customers safely hand tasks to AI agents are only now being written.", "Context": "The FIDO Alliance said on April 28, 2026 that it has started working groups on agent authentication and agent payments, chaired by members from CVS Health, Google, OpenAI, Mastercard and Visa, and that the specifications are still in development (global).", "Classification": "Nuance", "Source": "https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/"}, {"Quarter": "Q4 2026", "Pillar": "Move Money Instantly, Anywhere", "Headline": "FedNow is growing fast, with payment volume up 27.6% in a single quarter.", "Context": "Federal Reserve data show FedNow settled 6.38 million payments worth about $371 billion in July-September 2026 (US), up from 5.0 million payments and about $275 billion the quarter before.", "Classification": "Validation", "Source": "https://www.frbservices.org/wp-content/uploads/20261020-quarterly-3q2026-fednow-ascii.txt"}, {"Quarter": "Q4 2026", "Pillar": "Move Money Instantly, Anywhere", "Headline": "Same-day bank transfers are growing far faster than the US ACH network as a whole.", "Context": "Nacha reported 470.4 million Same Day ACH payments worth $1.3 trillion in the third quarter of 2026 (US), up 36.7% from a year earlier, while total ACH payments rose 5.9% to 9.3 billion.", "Classification": "Validation", "Source": "https://www.nacha.org/news/same-day-ach-growth-propels-ach-network-forward-third-quarter-2026"}, {"Quarter": "Q3 2026", "Pillar": "Move Money Instantly, Anywhere", "Headline": "Only about one in five US banks and credit unions has joined FedNow, and apps that already feel instant ease the pressure to join.", "Context": "A Richmond Fed economic brief from August 2026 counts 1,725 FedNow participants, 19.7% of US financial institutions as of the first quarter of 2026, and describes adoption as early and cautious.", "Classification": "Nuance", "Source": "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-28"}, {"Quarter": "Q4 2026", "Pillar": "Move Money Instantly, Anywhere", "Headline": "Everyday cross-border payments have become slower, not faster, since 2023.", "Context": "The Financial Stability Board's November 2026 global progress report found the share of retail cross-border services settling within one hour fell 1.3 percentage points and within one day 14.2 points since 2023, with no measurable progress on average retail cost.", "Classification": "Nuance", "Source": "https://www.fsb.org/uploads/P161126.pdf"}, {"Quarter": "Q3 2026", "Pillar": "Move Money Instantly, Anywhere", "Headline": "In the euro area, instant transfers are still a minority of bank transfers, especially by value.", "Context": "European Central Bank statistics published in July 2026 show instant credit transfers made up 25% of the number and 8% of the value of credit transfers processed by euro area retail payment systems in the second half of 2025.", "Classification": "Nuance", "Source": "https://www.ecb.europa.eu/press/stats/paysec/html/ecb.pis2025h2~23986fb4a6.en.html"}]</script>
+<script id="meta" type="application/json">{"pillars": [{"n": 1, "name": "Offer Personalized Financial Products", "read": "The plumbing for pricing on real cash flow arrived this year (Experian's cash-flow bureau, Plaid's new scores). Regulators accept that credit is priced to the individual, but are moving to make personalized pricing disclosed."}, {"n": 2, "name": "Actively Manage Customers' Finances", "read": "Consumers will let AI protect their money or carry out a task they already approved. Most are not ready to let it move money on its own, and interest in handing over control fell over the past year."}, {"n": 3, "name": "Orchestrate Across Full Financial Life", "read": "The supporting evidence is British: about 17 million UK open banking users and record monthly traffic. In the US the data-sharing rule is being rewritten, the EU plans to withdraw its open-finance proposal, and most Americans say they already keep most of their finances at one institution."}, {"n": 4, "name": "Meet Consumers Where They Are", "read": "Pay-later at checkout is a $156.7 billion US market and still growing by a third a year at Affirm. It also pushes some users into overdraft fees. Checkout inside AI assistants has been announced, but only 23% of Americans trust AI to pay for them and no volume data exists yet."}, {"n": 5, "name": "Engage One-to-One", "read": "Customers reward personalization and say they rarely get it: one in five say their bank always personalizes. They draw a line when AI decides without a human check, and regional institutions trail national and online-only banks."}, {"n": 6, "name": "Deliver Seamless & Proactive Servicing", "read": "No in-window evidence cleared the bar in support of this pillar. What did: fewer than three in ten app customers use the virtual assistant, 87% call a human option essential, California has legislated a route to a human, and few companies have cut service staff because of AI."}, {"n": 7, "name": "Proactively Protect Customers Against Emerging Threats", "read": "Reported fraud losses hit a record of about $16 billion for 2025, and recovery after the fact stops only a little over half of the money. Tools to stop payments first are uneven: no general federal rule lets banks hold a suspect electronic payment, and standards for controlling AI agents are still being written."}, {"n": 8, "name": "Move Money Instantly, Anywhere", "read": "US instant volumes are growing fast (FedNow up 27.6% in a quarter, Same Day ACH up 36.7% in a year) from a small base: about one in five institutions has joined FedNow. Cross-border retail payments have become slower since 2023."}]}</script>
+
+<script>
+(function(){
+  var DATA = JSON.parse(document.getElementById('data').textContent);
+  var M = JSON.parse(document.getElementById('meta').textContent);
+  var state = {q:'', pillar:null, cls:null, qtr:null};
+  var $ = function(s){ return document.querySelector(s); };
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function chip(label, n, key, val){
+    var b = document.createElement('button');
+    b.className = 'chip'; b.type = 'button';
+    b.innerHTML = esc(label) + '<span class="n">' + n + '</span>';
+    b.addEventListener('click', function(){ state[key] = state[key] === val ? null : val; render(); });
+    b._key = key; b._val = val;
+    return b;
+  }
+  function count(key, val){ return DATA.filter(function(r){ return val === null || r[key] === val; }).length; }
+  var chips = [];
+  function add(box, label, key, field, val){ var c = chip(label, count(field, val), key, val); chips.push(c); $(box).appendChild(c); }
+  add('#pillarChips', 'All', 'pillar', 'Pillar', null);
+  M.pillars.forEach(function(p){ add('#pillarChips', p.n + ' ' + p.name, 'pillar', 'Pillar', p.name); });
+  ['Validation','Nuance'].forEach(function(c){ add('#clsChips', c, 'cls', 'Classification', c); });
+  ['Q2 2026','Q3 2026','Q4 2026'].forEach(function(q){ add('#qtrChips', q, 'qtr', 'Quarter', q); });
+  function matches(r){
+    if (state.pillar && r['Pillar'] !== state.pillar) return false;
+    if (state.cls && r['Classification'] !== state.cls) return false;
+    if (state.qtr && r['Quarter'] !== state.qtr) return false;
+    if (state.q){
+      var hay = [r['Headline'], r['Context'], r['Source'], r['Pillar']].join(' ').toLowerCase();
+      return state.q.split(/\s+/).every(function(w){ return hay.indexOf(w) !== -1; });
+    }
+    return true;
+  }
+  function card(r){
+    var u = r['Source'];
+    var host = u.replace(/^https?:\/\//,'').replace(/^www\./,'').split('/')[0];
+    return '<article class="card">' +
+      '<div class="cardtop"><span class="fid">' + esc(r['Quarter']) + '</span>' +
+      '<span class="tag d-' + (r['Classification'] === 'Validation' ? 'a' : 'b') + '">' + esc(r['Classification']) + '</span></div>' +
+      '<p class="claim">' + esc(r['Headline']) + '</p>' +
+      '<p>' + esc(r['Context']) + '</p>' +
+      '<p class="src">Source: <a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(host) + '</a></p>' +
+      '</article>';
+  }
+  function render(){
+    chips.forEach(function(c){ c.setAttribute('aria-pressed', state[c._key] === c._val ? 'true' : 'false'); });
+    var html = '', shown = 0;
+    M.pillars.forEach(function(p){
+      var rows = DATA.filter(function(r){ return r['Pillar'] === p.name && matches(r); });
+      if (!rows.length) return;
+      shown += rows.length;
+      html += '<section class="group" id="pillar-' + p.n + '"><h2>' + p.n + ' · ' + esc(p.name) + '</h2><p class="gb">' + esc(p.read) + '</p>' + rows.map(card).join('') + '</section>';
+    });
+    $('#out').innerHTML = html || '<div class="empty">No signals match. Clear a filter or try a different word.</div>';
+    $('#count').textContent = shown + ' of ' + DATA.length + ' signals shown';
+  }
+  $('#q').addEventListener('input', function(e){ state.q = e.target.value.trim().toLowerCase(); render(); });
+  render();
+})();
+</script>
+
+</html>
